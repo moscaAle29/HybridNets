@@ -1,3 +1,9 @@
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join('.')))
+sys.path.append(os.path.dirname(__file__))
+
 import math
 import os
 import warnings
@@ -204,7 +210,7 @@ def init_weights(model):
 
 
 def variance_scaling_(tensor, gain=1.):
-    # type: (Tensor, float) -> Tensor
+
     r"""
     initializer for SeparableConv in Regressor/Classifier
     reference: https://keras.io/zh/initializers/  VarianceScaling
